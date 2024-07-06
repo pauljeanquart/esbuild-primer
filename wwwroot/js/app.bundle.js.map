@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["hello.ts", "app.ts"],
+  "sourcesContent": ["export default function hello(name: string) {\r\n    console.log(\"Hello \" + name + \"!\");\r\n}", "import hello from \"./hello.ts\"\r\n\r\nhello(\"Paul\");"],
+  "mappings": ";;AAAe,WAAR,MAAuB,MAAc;AACxC,YAAQ,IAAI,WAAW,OAAO,GAAG;AAAA,EACrC;;;ACAA,QAAM,MAAM;",
+  "names": []
+}
