@@ -1,6 +1,6 @@
 /* wwwroot/css/hello.scss */
 body div {
-  background-color: red;
+  background-color: rgb(0, 38, 255);
 }
 
 /* node_modules/@primer/primitives/dist/css/functional/themes/light.css */
