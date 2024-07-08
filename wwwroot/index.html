@@ -4,11 +4,463 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/app.bundle.css" asp-append-version="true" />
-    <title>Primer CSS cdn</title>
+    <!-- <link rel="stylesheet" href="css/app.bundle.css" asp-append-version="true" /> -->
+    <link
+    href="https://unpkg.com/@primer/css@^20.2.4/dist/primer.css"
+    rel="stylesheet"
+  />
+    <title>Primer CSS</title>
   </head>
   <body>
-<div><h1>Body</div>
+    <div style="max-width: 1200px" class="mx-auto py-1 px-2">
+      <!-- Start Navbar -->
+      <div>
+        <nav class="UnderlineNav" aria-label="Nav bar">
+          <div class="UnderlineNav-body">
+            <a
+              class="UnderlineNav-item app-link"
+              href="#home"
+              aria-current="page"
+              onclick="handleClick(this)"
+              >Home</a
+            >
+            <a
+              class="UnderlineNav-item app-link"
+              href="#about"
+              onclick="handleClick(this)"
+              >About</a
+            >
+            <a
+              class="UnderlineNav-item app-link"
+              href="#newsletter"
+              onclick="handleClick(this)"
+              >Newsletter</a
+            >
+          </div>
+          <div class="UnderlineNav-actions">
+            <a href="mailto:bonarhyme@gmail.com" class="btn btn-sm">Reach Us</a>
+          </div>
+        </nav>
+      </div>
+      <!-- End Navbar -->
+
+      <!-- Start Hero -->
+      <div id="hero" class="py-8 blankslate">
+        <div
+          style="width: 90%; max-height: 200px"
+          class="mx-auto border p-3 rounded-2"
+        >
+          <h1>I love Primer.css</h1>
+
+          <p>Click on the buttons below to find out why:</p>
+
+          <div class="d-flex flex-wrap px-3 my-4" style="gap: 0.5rem">
+            <!-- Pop up example -->
+            <div class="position-relative text-center">
+              <div
+                class="Popover position-relative app-popover"
+                style="display: none"
+              >
+                <div
+                  class="Popover-message Popover-message--bottom p-4 mx-auto mb-2 text-left Box color-shadow-large"
+                >
+                  <h4 class="mb-2">Yes, this is the heading</h4>
+                  <p>You are not out of luck! This is the message</p>
+                  <button
+                    type="submit"
+                    class="btn btn-outline mt-2 text-bold app-popover-btn"
+                    onclick="handlePopover()"
+                  >
+                    Got it!
+                  </button>
+                </div>
+              </div>
+              <button class="btn btn-primary" onclick="handlePopover()">
+                View Popup
+              </button>
+            </div>
+            <!-- End Pop up example -->
+
+            <!-- Loading example -->
+            <div class="position-relative text-center">
+              <div
+                class="Popover position-relative app-popover2"
+                style="display: none"
+              >
+                <div
+                  class="Popover-message Popover-message--bottom p-4 mx-auto mb-2 text-left Box color-shadow-large"
+                >
+                  <h2>
+                    <span>Loading</span
+                    ><span class="AnimatedEllipsis mb-2"></span>
+                  </h2>
+                  <button
+                    type="submit"
+                    class="btn btn-outline mt-2 text-bold app-popover-btn"
+                    onclick="handlePopover2()"
+                  >
+                    Got it!
+                  </button>
+                </div>
+              </div>
+              <button
+                class="btn-mktg btn-small-mktg mx-3"
+                type="button"
+                onclick="handlePopover2()"
+              >
+                View Others
+              </button>
+            </div>
+            <!-- End loading example -->
+
+            <!-- Dialog Example -->
+            <details
+              class="details-reset details-overlay details-overlay-light"
+            >
+              <summary class="btn" aria-haspopup="dialog">Open dialog</summary>
+              <details-dialog
+                class="Box Box--overlay d-flex flex-column anim-fade-in fast"
+              >
+                <div class="Box-header">
+                  <button
+                    class="Box-btn-octicon btn-octicon float-right"
+                    type="button"
+                    aria-label="Close dialog"
+                    data-close-dialog
+                  >
+                    <!-- <%= octicon "x" %> -->
+                    <svg
+                      class="octicon octicon-x"
+                      viewBox="0 0 12 16"
+                      version="1.1"
+                      width="12"
+                      height="16"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"
+                      ></path>
+                    </svg>
+                  </button>
+                  <h3 class="Box-title">What do you think about this?</h3>
+                </div>
+                <div class="overflow-auto">
+                  <div class="Box-body overflow-auto">
+                    <p>
+                      You see how cool this CSS framework is??
+                      <br />
+                      It is what it is!
+                    </p>
+                  </div>
+                  <ul>
+                    <li class="Box-row">
+                      <img
+                        class="avatar v-align-middle mr-2"
+                        src="https://avatars.githubusercontent.com/bonarhyme?s=48"
+                        alt="bonarhyme"
+                        width="24"
+                        height="24"
+                      />
+                      @bonarhyme
+                    </li>
+                    <li class="Box-row border-bottom">
+                      <img
+                        class="avatar v-align-middle mr-2"
+                        src="https://avatars.githubusercontent.com/bonarhyme?s=48"
+                        alt="bonarhyme"
+                        width="24"
+                        height="24"
+                      />
+                      @bonarhyme
+                    </li>
+                    <li class="Box-row border-bottom">
+                      <img
+                        class="avatar v-align-middle mr-2"
+                        src="https://avatars.githubusercontent.com/bonarhyme?s=48"
+                        alt="bonarhyme"
+                        width="24"
+                        height="24"
+                      />
+                      @bonarhyme
+                    </li>
+                  </ul>
+                </div>
+                <div class="Box-footer">
+                  <button type="button" class="btn btn-block" data-close-dialog>
+                    Close
+                  </button>
+                </div>
+              </details-dialog>
+            </details>
+
+            <!-- End of Dialog example -->
+          </div>
+        </div>
+        
+      </div>
+      <!-- End Hero -->
+
+      <!-- Start About -->
+      <div id="about">
+        <h2>
+          About
+          <button
+            type="button"
+            class="tooltipped tooltipped-nw m-2 border"
+            aria-label="Primer.css is a css framework built by Guthub"
+          >
+            Primer.css
+          </button>
+        </h2>
+
+        <div>
+          <!-- Colorful TimelineItem Badge -->
+          <div class="TimelineItem">
+            <div
+              class="TimelineItem-badge color-bg-danger-emphasis color-fg-on-emphasis"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                class="octicon"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zM5 8a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zM5.32 9.636a.75.75 0 011.038.175l.007.009a1.82 1.82 0 00.35.31c.264.178.683.37 1.285.37.602 0 1.02-.192 1.285-.371a1.82 1.82 0 00.35-.31l.007-.008a.75.75 0 011.222.87l-.614-.431c.614.43.614.431.613.431v.001l-.001.002-.002.003-.005.007-.014.019a1.989 1.989 0 01-.184.213 3.32 3.32 0 01-.53.445A3.766 3.766 0 018 12c-.946 0-1.652-.308-2.126-.63a3.323 3.323 0 01-.673-.604 1.975 1.975 0 01-.042-.053l-.014-.02-.005-.006-.002-.003v-.002h-.001l.613-.432-.614.43a.75.75 0 01.183-1.044z"
+                ></path>
+              </svg>
+            </div>
+            <div class="TimelineItem-body">
+              Primer.css is cool. It even has built in bread crumbs. See:
+
+              <br />
+
+              <nav aria-label="Breadcrumb">
+                <ol>
+                  <li class="breadcrumb-item">
+                    <a href="https://github.com/bonarhyme">Bonarhyme</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="https://github.com/bonarhyme">Chukwudi</a>
+                  </li>
+                  <li class="breadcrumb-item breadcrumb-item-selected">
+                    <a href="https://github.com/bonarhyme" aria-current="page"
+                      >Bonaventure</a
+                    >
+                  </li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+          <div class="TimelineItem">
+            <div
+              class="TimelineItem-badge color-bg-success-emphasis color-fg-on-emphasis"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                class="octicon"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zM5 8a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zM5.32 9.636a.75.75 0 011.038.175l.007.009a1.82 1.82 0 00.35.31c.264.178.683.37 1.285.37.602 0 1.02-.192 1.285-.371a1.82 1.82 0 00.35-.31l.007-.008a.75.75 0 011.222.87l-.614-.431c.614.43.614.431.613.431v.001l-.001.002-.002.003-.005.007-.014.019a1.989 1.989 0 01-.184.213 3.32 3.32 0 01-.53.445A3.766 3.766 0 018 12c-.946 0-1.652-.308-2.126-.63a3.323 3.323 0 01-.673-.604 1.975 1.975 0 01-.042-.053l-.014-.02-.005-.006-.002-.003v-.002h-.001l.613-.432-.614.43a.75.75 0 01.183-1.044z"
+                ></path>
+              </svg>
+            </div>
+            <div class="TimelineItem-body">
+              It helps with truncation. See what I mean:
+
+              <br />
+
+              <div class="Box p-2" style="resize: horizontal; overflow: scroll">
+                <span class="Truncate">
+                  <a href="#" class="Truncate-text Truncate-text--expandable"
+                    >ever-wondered-how-to-shorten-a-really-long-word?</a
+                  >
+                  <a href="#" class="Truncate-text Truncate-text--expandable"
+                    >ever-wondered-how-to-shorten-a-really-long-word?</a
+                  >
+                  <a href="#" class="Truncate-text Truncate-text--expandable"
+                    >ever-wondered-how-to-shorten-a-really-long-word?</a
+                  >
+                  <a href="#" class="Truncate-text Truncate-text--expandable"
+                    >ever-wondered-how-to-shorten-a-really-long-word?</a
+                  >
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="TimelineItem">
+            <div
+              class="TimelineItem-badge color-bg-done-emphasis color-fg-on-emphasis"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                class="octicon"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zM5 8a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zM5.32 9.636a.75.75 0 011.038.175l.007.009a1.82 1.82 0 00.35.31c.264.178.683.37 1.285.37.602 0 1.02-.192 1.285-.371a1.82 1.82 0 00.35-.31l.007-.008a.75.75 0 011.222.87l-.614-.431c.614.43.614.431.613.431v.001l-.001.002-.002.003-.005.007-.014.019a1.989 1.989 0 01-.184.213 3.32 3.32 0 01-.53.445A3.766 3.766 0 018 12c-.946 0-1.652-.308-2.126-.63a3.323 3.323 0 01-.673-.604 1.975 1.975 0 01-.042-.053l-.014-.02-.005-.006-.002-.003v-.002h-.001l.613-.432-.614.43a.75.75 0 01.183-1.044z"
+                ></path>
+              </svg>
+            </div>
+            <div class="TimelineItem-body">
+              It has cool links that looks like this:
+              <br />
+
+              <a
+                href="#"
+                class="link-mktg arrow-target-mktg text-semibold f3-mktg"
+              >
+                Follow me asap!
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="octicon arrow-symbol-mktg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z"
+                  ></path>
+                  <path
+                    stroke="currentColor"
+                    d="M1.75 8H11"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="TimelineItem">
+            <div
+              class="TimelineItem-badge color-bg-accent-emphasis color-fg-on-emphasis"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                class="octicon"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zM5 8a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zM5.32 9.636a.75.75 0 011.038.175l.007.009a1.82 1.82 0 00.35.31c.264.178.683.37 1.285.37.602 0 1.02-.192 1.285-.371a1.82 1.82 0 00.35-.31l.007-.008a.75.75 0 011.222.87l-.614-.431c.614.43.614.431.613.431v.001l-.001.002-.002.003-.005.007-.014.019a1.989 1.989 0 01-.184.213 3.32 3.32 0 01-.53.445A3.766 3.766 0 018 12c-.946 0-1.652-.308-2.126-.63a3.323 3.323 0 01-.673-.604 1.975 1.975 0 01-.042-.053l-.014-.02-.005-.006-.002-.003v-.002h-.001l.613-.432-.614.43a.75.75 0 01.183-1.044z"
+                ></path>
+              </svg>
+            </div>
+            <div class="TimelineItem-body">
+              It has built in toast that looks like this:
+
+              <div class="p-1">
+                <div class="Toast Toast--success">
+                  <span class="Toast-icon">
+                    <!-- <%= octicon "check" %> -->
+                    <svg
+                      width="12"
+                      height="16"
+                      viewBox="0 0 12 16"
+                      class="octicon octicon-check"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="Toast-content">This is for success message</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End About -->
+      <br />
+      <br />
+      <br />
+
+      <!-- Start Newsletter -->
+      <div id="newsletter">
+        <h2 class="py-2 h3-mktg">Subscribe to my Newsletter</h2>
+        <form>
+          <div class="form-group">
+            <div class="form-group-header">
+              <label for="example-text">Email address</label>
+            </div>
+            <div class="form-group-body">
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Email address"
+                id="example-text"
+              />
+            </div>
+          </div>
+          <button class="btn btn-block btn-primary" style="max-width: 440px">
+            Submit
+          </button>
+        </form>
+      </div>
+      <!-- End Newsletter -->
+      <br />
+      <br />
+      <br />
+      <!-- Start Footer -->
+      <div>
+        <p class="text-center py-4">
+          Made by
+
+          <a href="https://github.com/bonarhyme">bonarhyme</a>
+        </p>
+      </div>
+      <!-- End Footer -->
+    </div>
     <script src="js/app.bundle.js"></script>
+    <script>
+      function handleClick(e) {
+        document.querySelectorAll('.app-link').forEach((x) => {
+          x.removeAttribute('aria-current');
+        });
+        e.setAttribute('aria-current', 'page');
+      }
+
+      function handlePopover() {
+        const popup = document.querySelector('.app-popover');
+
+        if (popup.style.display === 'none') {
+          popup.style.display = 'block';
+        } else {
+          popup.style.display = 'none';
+        }
+      }
+
+      function handlePopover2() {
+        const popup = document.querySelector('.app-popover2');
+
+        if (popup.style.display === 'none') {
+          popup.style.display = 'block';
+        } else {
+          popup.style.display = 'none';
+        }
+      }
+    </script>
   </body>
 </html>
